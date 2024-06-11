@@ -1,6 +1,6 @@
-# esm-template
+# ecard-sdk
 
-[![Node.js CI](https://github.com/liudonghua123/esm-template/actions/workflows/node.js.yml/badge.svg)](https://github.com/liudonghua123/esm-template/actions/workflows/node.js.yml)
+[![Node.js CI](https://github.com/liudonghua123/ecard-sdk/actions/workflows/node.js.yml/badge.svg)](https://github.com/liudonghua123/ecard-sdk/actions/workflows/node.js.yml)
 
 This is a simple NodeJS template project.
 

@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-sandbox",
+  "name": "ecard-sdk",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/liudonghua123/esm-template.git"
+    "url": "git+https://github.com/liudonghua123/ecard-sdk.git"
   },
   "keywords": [],
   "author": "Ives van Hoorne",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/liudonghua123/esm-template/issues"
+    "url": "https://github.com/liudonghua123/ecard-sdk/issues"
   },
-  "homepage": "https://github.com/liudonghua123/esm-template#readme",
+  "homepage": "https://github.com/liudonghua123/ecard-sdk#readme",
   "devDependencies": {
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-prettier": "^9.1.0",
