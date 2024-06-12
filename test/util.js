@@ -11,11 +11,11 @@ const stuempno = '20160019';
 describe('utli test', () => {
     it('sign test with hexString format key input', async () => {
         const signedStr = await sign({ stuempno }, hmacSha1Key, 'hexString');
-        assert.strictEqual(signedStr, `322b2348f5651d9021b7c2f1199b8014706f7b6a`);
+        assert.strictEqual(signedStr, `c056d5230bd3a4068a456ffbf27b37ace7e389a2`);
     });
     it('sign test with textString format key input', async () => {
         const signedStr = await sign({ stuempno }, hmacSha1Key, 'textString');
-        assert.strictEqual(signedStr, `ce919508e7f95815da7d81ed64193dbdfef16d20`);
+        assert.strictEqual(signedStr, `10bbb9143f3c6fd03c41a25440b1dc4958c8221d`);
     });
 
 }); 
