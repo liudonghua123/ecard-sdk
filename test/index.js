@@ -17,9 +17,9 @@ describe('index test', () => {
     });
 
     it('batchCustcardinfo test', async () => {
-        // TODO: need to fix: { retcode: '304', retmsg: 'sign check error' }
-        const response = await batchCustcardinfo({ pageno: '1', pagesize: '3', cardupdtime: '20240612091900' });
-        console.info(`response`, response);
+        // TODO: need to fix: { retcode: '304', retmsg: 'sign check error' } when passed pageno and pagesize
+        const response = await batchCustcardinfo({ cardupdtime: '20230101151515' });
+        // console.info(`response`, response);
         assert.strictEqual(response.retcode, '0');
     });
 

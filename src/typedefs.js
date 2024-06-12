@@ -4,8 +4,8 @@
  * @prop {string} [cardphyid] the card physical id
  * 
  * @typedef _BatchCustcardinfoInput
- * @prop {string} pageno the page number
- * @prop {string} pagesize the page size
+ * @prop {string} [pageno] the page number
+ * @prop {string} [pagesize] the page size
  * @prop {string} [cardupdtime] the update time of the card
  * @prop {string} [custupdtime] the update time of the customer
  * @typedef {_BatchCustcardinfoInput & ({cardupdtime: string, custupdtime?: never} | {cardupdtime?: never, custupdtime: string})} BatchCustcardinfoInput
