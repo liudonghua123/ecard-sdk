@@ -1,3 +1,4 @@
+/// <reference path="./typedefs.js" />
 /**
  * @typedef {import('./typedefs.js').BasicInfo} BasicInfo
  * @typedef {import('./typedefs.js').CommonResponse} CommonResponse

@@ -3,17 +3,18 @@
  * @prop {string} stuempno the student employee id
  * @prop {string} [cardphyid] the card physical id
  * 
+ * @typedef {{cardupdtime: string, custupdtime?: never} | {cardupdtime?: never, custupdtime: string}} _BatchCustcardinfoExtraInput
  * @typedef _BatchCustcardinfoInput
  * @prop {string} [pageno] the page number
  * @prop {string} [pagesize] the page size
  * @prop {string} [cardupdtime] the update time of the card
  * @prop {string} [custupdtime] the update time of the customer
- * @typedef {_BatchCustcardinfoInput & ({cardupdtime: string, custupdtime?: never} | {cardupdtime?: never, custupdtime: string})} BatchCustcardinfoInput
+ * @typedef {_BatchCustcardinfoInput & _BatchCustcardinfoExtraInput} BatchCustcardinfoInput
  * 
  * @typedef CommonGetbilldataInput
  * @prop {string} stuempno the student employee id
- * @prop {string} pageno the page number
- * @prop {string} pagesize the page size
+ * @prop {string} [pageno] the page number
+ * @prop {string} [pagesize] the page size
  * @prop {string} [startdate] the start date, format: yyyyMMdd
  * @prop {string} [enddate] the end date, format: yyyyMMdd
  * 
@@ -25,9 +26,10 @@
  * @prop {string} [stuempno] the student employee id
  * @prop {string} [cardphyid] the card physical id
  * 
+ * @typedef {{stuempno: string, cardphyid?: never} | {stuempno?: never, cardphyid: string}} _CommonVerifyExtraInput
  * @typedef _CommonVerifyInput
  * @prop {string} cardpwd the card password
- * @typedef {_CommonVerifyInput & ({stuempno: string, cardphyid?: never} | {stuempno?: never, cardphyid: string})} CommonVerifyInput
+ * @typedef {_CommonVerifyInput & _CommonVerifyExtraInput} CommonVerifyInput
  * 
  * @typedef CommonCardfrozeInput
  * @prop {string} student_id the student id, 用户标识, 现支持卡号、物理卡号、学工号、客户号、身份证号
