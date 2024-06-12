@@ -1,18 +1,45 @@
+/**
+ * @typedef {import('../src//typedefs.js').BasicInfo} BasicInfo
+ * @typedef {import('../src/typedefs.js').CommonResponse} CommonResponse
+ */
+
 import { describe, it } from 'node:test';
 import assert from 'node:assert';
+import { singleCustcardinfo, batchCustcardinfo, commonGetbilldata, commonAccountquery, commonGetphoto } from '../src/index.js';
 
-describe('A thing', () => {
-    it('should work', () => {
-        assert.strictEqual(1, 1);
+const stuempno = '20160019';
+
+describe('index test', () => {
+    it('singleCustcardinfo test', async () => {
+        const response = await singleCustcardinfo({ stuempno });
+        // console.info(`response`, response);
+        assert.strictEqual(response.retcode, '0');
     });
 
-    it('should be ok', () => {
-        assert.strictEqual(2, 2);
+    it('batchCustcardinfo test', async () => {
+        // TODO: need to fix: { retcode: '304', retmsg: 'sign check error' }
+        const response = await batchCustcardinfo({ pageno: '1', pagesize: '3', cardupdtime: '20240612091900' });
+        console.info(`response`, response);
+        assert.strictEqual(response.retcode, '0');
     });
 
-    describe('a nested thing', () => {
-        it('should work', () => {
-            assert.strictEqual(3, 3);
-        });
+    it('commonGetbilldata test', async () => {
+        // TODO: need to fix: { retcode: '1', retmsg: '请求失败，系统错误' }
+        const response = await commonGetbilldata({ stuempno, pageno: '1', pagesize: '3', startdate: '20240512', enddate: '20240612' });
+        console.info(`response`, response);
+        assert.strictEqual(response.retcode, '0');
     });
+
+    it('commonAccountquery test', async () => {
+        const response = await commonAccountquery({ stuempno });
+        // console.info(`response`, response);
+        assert.strictEqual(response.retcode, '0');
+    });
+
+    it('commonGetphoto test', async () => {
+        const response = await commonGetphoto({ student_idtype: 'stuempno', student_id: stuempno });
+        // console.info(`response`, response);
+        assert.strictEqual(response.retcode, '0');
+    });
+
 }); 
